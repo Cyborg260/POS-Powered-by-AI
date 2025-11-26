@@ -9,7 +9,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
 
-        {/* Left logo image + text */}
+
         <div className={styles.left}>
           <div className={styles.logoBox}>
             <Image
@@ -23,19 +23,21 @@ export default function Header() {
           <span className={styles.appName}>WIGA POS</span>
         </div>
 
-        {/* Right side */}
+
         <div className={styles.right}>
-        
+
 
           <SignedOut>
             <SignInButton mode="modal">
-              <button className={styles.signinBtn}>Sign In</button>
+              <button className={styles.signInBtn}>Sign In</button>
             </SignInButton>
           </SignedOut>
 
+
           <SignedIn>
-            <UserButton afterSignOutUrl="/" />
+            <UserButton afterSignOutUrl="/sign-in" />
           </SignedIn>
+
         </div>
 
       </div>

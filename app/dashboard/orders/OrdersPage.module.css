@@ -1,5 +1,6 @@
 .page {
-  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .headerRow {
@@ -20,7 +21,6 @@
   margin-bottom: 22px;
 }
 
-/* Export Button */
 .exportBtn {
   background-color: #0f172a;
   color: white;
@@ -28,10 +28,7 @@
   padding: 8px 16px;
   border-radius: 6px;
   font-weight: 600;
-  font-family: 'Arial', sans-serif;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-
   display: flex;
   align-items: center;
 }
@@ -55,13 +52,92 @@
   flex: 1;
 }
 
-.card h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 5px;
+/***********************
+  SEARCH + FILTER ROW
+************************/
+.searchFilterRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  margin-top: -5px;
 }
 
-/* Table */
+/* Large Search Bar */
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0 16px;
+  height: 46px;
+  width: 100%;
+  max-width: 650px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #6b7280;
+  width: 100%;
+}
+
+/* Filter button */
+.filterWrapper {
+  position: relative;
+}
+
+.filterBtn {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0 16px;
+  height: 46px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.filterBtn img {
+  opacity: 0.7;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 52px;
+  right: 0;
+  width: 150px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  z-index: 20;
+}
+
+.dropdownItem {
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #555;
+}
+
+.dropdownItem:hover {
+  background: #f5f5f5;
+}
+
+/***********************
+        TABLE
+************************/
 .tableWrapper {
   background: #fff;
   border: 1px solid #ececec;
@@ -79,16 +155,9 @@
   border-bottom: 1px solid #e6e6e6;
 }
 
-.table th {
-  padding: 14px;
-  text-align: left;
-  font-size: 14px;
-  color: #444;
-}
-
+.table th,
 .table td {
   padding: 14px;
-  border-bottom: 1px solid #f2f2f2;
   font-size: 14px;
 }
 
@@ -102,13 +171,12 @@
   color: #777;
 }
 
-/* Status Badges */
+/* Status badges */
 .badge {
   padding: 5px 10px;
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;
-  display: inline-block;
 }
 
 .completed {
@@ -131,7 +199,6 @@
   color: #dd2a2a;
 }
 
-/* View button */
 .viewBtn {
   background: transparent;
   border: none;

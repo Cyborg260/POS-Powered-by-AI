@@ -1,3 +1,7 @@
+body {
+  padding-top: 70px; /* header ki approx height */
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -16,6 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .left {
@@ -47,7 +52,8 @@
   gap: 15px;
 }
 
-.signinBtn {
+.sign-in
+Btn {
   background-color: #f37e0a;
   color: white;
   border: none;
@@ -59,7 +65,8 @@
   transition: background-color 0.2s ease;
 }
 
-.signinBtn:hover {
+.sign-in
+Btn:hover {
   background-color: #d36d08;
 }
 /* Add this in globals.css */

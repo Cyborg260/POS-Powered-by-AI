@@ -1,8 +1,5 @@
-// app/page.jsx
+import { redirect } from "next/navigation";
+
 export default function Home() {
-  return (
-    <div>
-      <h1>Welcome to Dashboard</h1>
-    </div>
-  );
+  redirect("/sign-in");
 }
