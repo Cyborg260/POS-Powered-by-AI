@@ -1,5 +1,6 @@
+// app/layout.js
 import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
+// ClerkProvider import ko hata diya gaya hai
 import LayoutClient from "./LayoutClient";
 
 export const metadata = {
@@ -9,12 +10,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body>
-          <LayoutClient>{children}</LayoutClient>
-        </body>
-      </html>
-    </ClerkProvider>
+    // ClerkProvider tags ko bhi hata diya gaya hai
+    <html lang="en">
+      <body>
+        <LayoutClient>{children}</LayoutClient>
+      </body>
+    </html>
   );
 }
