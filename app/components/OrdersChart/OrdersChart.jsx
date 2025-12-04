@@ -27,8 +27,8 @@ export default function OrdersChart() {
   };
 
   const options = {
+
     responsive: true,
-    maintainAspectRatio: false,
     layout: {
       padding: { left: 20, right: 20, top: 10, bottom: 30 },
     },
@@ -45,5 +45,6 @@ export default function OrdersChart() {
     },
   };
 
-  return <Bar data={data} options={options} />;
+  return <Bar key={Math.random()} data={data} options={options} />;
+
 }

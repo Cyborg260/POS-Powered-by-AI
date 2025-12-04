@@ -1,8 +1,10 @@
 .dashboardCard {
-  background: #fefefe;
+  /* background: #fefefe; */
   border-radius: 16px;
   padding: 18px 20px;
   border: 1px solid #f1f1f1;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+
 }
 
 .dashboardcardTop {
@@ -10,6 +12,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .dashboardCardsGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -52,6 +55,7 @@
   font-weight: 700;
   color: #111827;
 }
+
 /* Responsive like dashboard */
 @media (max-width: 1024px) {
   .dashboardCardsGrid {

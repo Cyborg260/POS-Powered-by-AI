@@ -1,4 +1,5 @@
-import styles from "@/app/dashboard/dashboard.module.css";
+import styles from "@/app/components/Dashbaord/Dashboard"
+
 export default function Customers() {
   return <div>
     <div className={styles.dashboardHeading}>Custumers</div>

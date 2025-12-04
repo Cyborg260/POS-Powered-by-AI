@@ -1,17 +1,20 @@
-
 .dashboardHeading {
   font-size: 34px;
   font-weight: bold;
 }
-.dashboardContainer{
+
+.dashboardContainer {
   flex-grow: 1;
 }
-.sidebarContainer{
+
+.sidebarContainer {
   width: auto;
 }
+
 .dashboardHeader {
   margin-bottom: 50px;
 }
+
 .chartGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -20,29 +23,36 @@
 }
 
 .chartHeading {
-  font-size: 25px; 
+  font-size: 16px;
   font-weight: 700;
-  margin-bottom: 12px; 
-  margin-top: 0; 
-  color: #333; 
+  margin-bottom: 12px;
+  margin-top: 0;
+  color: #333;
 }
 
 
 .chartCard {
   background: white;
   border-radius: 12px;
-  padding: 20px 20px 30px 20px; /* Bottom padding increased */
-  height: 280px;
+  padding: 0;
+  /* REMOVE padding */
+  height: 300px;
+  /* Fixed height for chart */
   width: 100%;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
-
+.chartCard:first-child {
+  padding-bottom: 20px;
+}
 
 .chartWrapper {
+  flex: 1;
   width: 100%;
   height: 100%;
-  padding-bottom: 20px; /* New spacing */
+  padding: 20px;
+  box-sizing: border-box;
 }

@@ -1,0 +1,58 @@
+"use client";
+import { useUser } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import DashboardCards from "@/app/components/DashboardCards/DashbaordCards";
+import SalesChart from "@/app/components/SalesChart/SalesChart";
+import OrdersChart from "@/app/components/OrdersChart/OrdersChart";
+import OrdersPanel from "@/app/components/OrdersPanel/OrdersPanel";
+import styles from "./dashboard.module.css";
+
+
+export default function Dashboard() {
+  const { isSignedIn } = useUser();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!isSignedIn) {
+      router.push("/sign-in"); // redirect logged-out user
+    }
+  }, [isSignedIn]);
+
+  if (!isSignedIn) return null; // don’t render until user is signed in
+
+  return (
+    <div className={styles.dashboardContainer}>
+      {/* Dashboard Header */}
+      <div className={styles.dashboardHeader}>
+        <h1 className={styles.dashboardHeading}>Dashboard</h1>
+        <p>Welcome back! Here's what's happening with your store today.</p>
+      </div>
+
+      {/* Dashboard Cards */}
+      <DashboardCards />
+
+      {/* Charts Grid */}
+      <div className={styles.chartGrid}>
+        {/* Sales Chart */}
+        <div className={styles.chartCard}>
+          <div className={styles.chartWrapper}>
+            <h3 className={styles.chartHeading}>Sales Overview</h3>
+            <SalesChart />
+          </div>
+        </div>
+
+        {/* Orders Chart */}
+        <div className={styles.chartCard}>
+          <div className={styles.chartWrapper}>
+            <h3 className={styles.chartHeading}>Orders Overview</h3>
+            <OrdersChart />
+          </div>
+        </div>
+      </div>
+
+      {/* Orders Panel */}
+      <OrdersPanel />
+    </div>
+  );
+}

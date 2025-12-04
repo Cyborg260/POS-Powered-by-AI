@@ -47,8 +47,8 @@ export default function Sidebar() {
     {
       name: "Analytics",
       href: "/dashboard/analytics",
-      icon: "/images/analytic.png",
-      activeIcon: "/images/analyticsWhite.png",
+      icon: "/images/Analytics.png",
+      activeIcon: "/images/analyticsWhite2.png",
       cls: styles.analytics,
     },
     {

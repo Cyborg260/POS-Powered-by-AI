@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./order.module.css";
+import styles from "./orderPanel.module.css";
 
 export default function OrdersPanel() {
   const orders = [
