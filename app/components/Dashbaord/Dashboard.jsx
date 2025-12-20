@@ -20,9 +20,9 @@ return (
       {/* Dashboard Cards */}
       <DashboardCards />
 
-      {/* Charts Grid */}
-      <div className={styles.chartGrid}>
-        {/* Sales Chart */}
+     
+ {/* <div className={styles.chartGrid}>
+        
         <div className={styles.chartCard}>
           <div className={styles.chartWrapper}>
             <h3 className={styles.chartHeading}>Sales Overview</h3>
@@ -30,17 +30,17 @@ return (
           </div>
         </div>
 
-        {/* Orders Chart */}
+
         <div className={styles.chartCard}>
           <div className={styles.chartWrapper}>
             <h3 className={styles.chartHeading}>Orders Overview</h3>
             <OrdersChart />
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Orders Panel */}
-      <OrdersPanel />
+      {/* <OrdersPanel /> */}
     </div>
   );
 }

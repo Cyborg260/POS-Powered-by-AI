@@ -17,26 +17,14 @@ export default function Sidebar() {
       cls: styles.dashboard,
     },
     {
-      name: "Point of Sale",
-      href: "/dashboard/point-of-sale",
+      name: "vendors",
+      href: "/dashboard/vendors",
       icon: "/images/point-of-sale-icon.png",
       activeIcon: "/images/point-of-saleWhite.png",
       cls: styles.pointOfSale,
     },
-    {
-      name: "Products",
-      href: "/dashboard/products",
-      icon: "/images/products-icon.png",
-      activeIcon: "/images/ProductsWhite.png",
-      cls: styles.products,
-    },
-    {
-      name: "Orders",
-      href: "/dashboard/orders",
-      icon: "/images/orders-icon.png",
-      activeIcon: "/images/OrderWhite.png",
-      cls: styles.orders,
-    },
+ 
+
     {
       name: "Customers",
       href: "/dashboard/customers",
@@ -44,20 +32,28 @@ export default function Sidebar() {
       activeIcon: "/images/communityWhite.png",
       cls: styles.customers,
     },
-    {
-      name: "Analytics",
-      href: "/dashboard/analytics",
-      icon: "/images/Analytics.png",
-      activeIcon: "/images/analyticsWhite2.png",
-      cls: styles.analytics,
-    },
-    {
-      name: "Setting",
+      {
+      name: "Settings",
       href: "/dashboard/setting-pos",
       icon: "/images/setting-icon.png",
-      activeIcon: "/images/analyticsWhite.png",
-      cls: styles.setting,
+      activeIcon: "/images/settingswhite.png",
+      cls: styles.customers,
     },
+ 
+    // {
+    //   name: "Inventory",
+    //   href: "/dashboard/inventory",
+    //   icon: "/images/customers-icon.png",
+    //   activeIcon: "/images/communityWhite.png",
+    //   cls: styles.customers,
+    // },
+    // {
+    //   name: "Setting",
+    //   href: "/dashboard/setting-pos",
+    //   // icon: "/images/setting-icon.png",
+    //   // activeIcon: "/images/analyticsWhite.png",
+    //   cls: styles.setting,
+    // },
   ];
 
   return (
